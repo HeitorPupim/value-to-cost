@@ -3,12 +3,13 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // 👇 Em dev: '/', Em prod: '/value-to-cost/'
+  base: mode === "production" ? "/value-to-cost/" : "/",
   server: {
-    base: "/value-to-cost/", // 👈 importante para GitHub Pages
-    host: "::",
-    port: 8080,
+    host: true,              // aceita localhost/127.0.0.1
+    port: 5173,              // porta padrão do Vite
+    open: "/",               // abre o navegador na home
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
