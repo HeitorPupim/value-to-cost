@@ -24,7 +24,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+
+    /* 👇 TIPOS DO VITE (resolve import.meta.env, etc.) */
+    "types": ["vite/client"]
   },
   "include": ["src"]
 }
