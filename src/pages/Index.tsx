@@ -1,12 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import ImportCalculator from "@/components/ImportCalculator";
+import { Ship } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-[var(--gradient-subtle)]">
+      {/* Hero Section */}
+      <header className="pt-16 pb-12 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="inline-flex items-center justify-center p-3 mb-6 rounded-2xl bg-primary/10 shadow-[var(--shadow-elegant)]">
+            <Ship className="w-10 h-10 text-primary" />
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Import Cost Calculator
+          </h1>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Calculate your total importation costs including customs duties, VAT, and freight in seconds
+          </p>
+        </div>
+      </header>
+
+      {/* Calculator Section */}
+      <main className="px-4 pb-16">
+        <div className="max-w-6xl mx-auto">
+          <ImportCalculator />
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="py-8 px-4 border-t border-border/50">
+        <div className="max-w-6xl mx-auto text-center text-sm text-muted-foreground">
+          <p>Calculation rates are estimates. Please verify with your customs authority for accurate rates.</p>
+        </div>
+      </footer>
     </div>
   );
 };
