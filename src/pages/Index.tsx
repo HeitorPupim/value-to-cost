@@ -11,10 +11,10 @@ const Index = () => {
             <Ship className="w-10 h-10 text-primary" />
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Import Cost Calculator
+            Calculadora de Importação Simplificada
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Calculate your total importation costs including customs duties, VAT, and freight in seconds
+            Calcule o custo total de importação de produtos para o Brasil, incluindo impostos e taxas em segundos.
           </p>
         </div>
       </header>
@@ -29,7 +29,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-border/50">
         <div className="max-w-6xl mx-auto text-center text-sm text-muted-foreground">
-          <p>Calculation rates are estimates. Please verify with your customs authority for accurate rates.</p>
+          <p>O calculo dos custos é um valor estimado.</p>
         </div>
       </footer>
     </div>
