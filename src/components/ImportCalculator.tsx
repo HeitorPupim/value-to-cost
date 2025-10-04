@@ -149,7 +149,7 @@ const ImportCalculator = () => {
   return (
     <div className="grid md:grid-cols-2 gap-6">
       {/* Input Card */}
-      <Card className="shadow-[var(--shadow-card)] transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-elegant)]">
+      <Card className="backdrop-blur-xl bg-card/40 border-border/50 shadow-[var(--shadow-card)] transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-elegant)]">
         <CardHeader>
           <div className="flex items-center gap-2">
             <div className="p-2 rounded-lg bg-primary/10">
@@ -253,7 +253,7 @@ const ImportCalculator = () => {
             </div>
           </div>
 
-          <div className="pt-2 text-xs text-muted-foreground bg-muted/50 p-3 rounded-lg">
+          <div className="pt-2 text-xs text-muted-foreground backdrop-blur-sm bg-muted/30 p-3 rounded-lg border border-border/30">
             <p className="font-medium mb-1">Regras (modo gross-up para ICMS):</p>
             <p>• Subtotal(BRL) = (Mercadoria + Frete) × câmbio</p>
             <p>• II = Subtotal(BRL) × II%</p>
@@ -265,7 +265,7 @@ const ImportCalculator = () => {
       </Card>
 
       {/* Results Card */}
-      <Card className="shadow-[var(--shadow-card)] transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-elegant)] bg-gradient-to-br from-card to-primary/5">
+      <Card className="backdrop-blur-xl bg-card/40 border-border/50 shadow-[var(--shadow-card)] transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-elegant)] bg-gradient-to-br from-card/50 to-primary/5">
         <CardHeader>
           <div className="flex items-center gap-2">
             <div className="p-2 rounded-lg bg-accent/10">
@@ -333,7 +333,7 @@ const ImportCalculator = () => {
               </div>
 
               {result.perUnitCost !== undefined && (
-                <div className="mt-4 p-4 rounded-lg bg-accent/10 border border-accent/20">
+                <div className="mt-4 p-4 rounded-lg backdrop-blur-sm bg-accent/10 border border-accent/30">
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium text-accent-foreground">Custo por unidade</span>
                     <span className="text-lg font-bold text-accent">{formatBRL(result.perUnitCost)}</span>
